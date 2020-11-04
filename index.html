@@ -1,51 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    
+
 <head>
-    <title>자기소개</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>HTML 실습</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1><a href="index.html">자기소개</a></h1>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JAVASCRIPT</a></li>
+        </ol>
 
-안녕하세요 저는 <u><strong>임성현</strong></u>입니다
-<ol>
-    <li><a href="1.html">이력서</a></li>
-    <li><a href="2.html">자기소개서</a></li>
-    <li><a href="3.html">포트폴리오</a></li>
-</ol>
-
-<table border="1">
-  <thead>
-    <tr>
-        <th>이름</th><th>성별</th><th>주소</th><th>회비</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td>임성현</td><td>남</td> <td rowspan="2">서울</td><td>1000</td>
-    </tr>
-    
-    <tr>
-        <td>양지혜</td><td>여</td> <td>500</td>
-    </tr>
-  </tbody>
-  <tfoot>
-      <tr>
-        <td colspan="3">합계</td>  <td>1500</td>
-      </tr>
-  </tfoot>
-</table>
-<h2> HTML </h2>
-<p style="margin-top: 40px;"><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" title="What is HTML?">HyperText</a> 
-Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
-It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p> 
-
-<p>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages.
-HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
-<img src="src/coding.jpg.jpg" width=450 alt="표시x">
+        <div id="article">
+            <h2>생활코딩 예제 연습</h2>
+            생활코딩 이고잉님의 예제를 연습하기 위한 웹 페이지.
+        </div>    
+        <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night') {
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day').value = 'day';
+        } else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day').value = 'night';
+        }">
+    </div>
 
 </body>
+
 </html>
