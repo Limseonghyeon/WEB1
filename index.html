@@ -17,14 +17,74 @@
             <li><a href="2.html">CSS</a></li>
             <li><a href="3.html">JAVASCRIPT</a></li>
         </ol>
-
         <div id="article">
             <h2>생활코딩 예제 연습</h2>
             생활코딩 이고잉님의 예제를 연습하기 위한 웹 페이지.
         </div>    
-        <input type="button" value="night" onclick="
-        nightday(this);">
     </div>
+    <h2>* Night_Day Handler</h2>
+    <input type="button" value="night" onclick="nightday(this);">
+    <h2>* BOM-alert</h2>
+    <input type="button" value="alert" onclick="alertfnc();" />
+    <h2>* BOM-confirm</h2>
+    <input type="button" value="confirm" onclick="confirmfnc();" />
+    <h2>* BOM-prompt</h2>
+    <input type="button" value="prompt" onclick="promptfnc();" />
+    <h2>* BOM-location</h2>
+    <input type="button" value="alert" onclick="locationfnc();" />
+    <input type="button" value="reload" onclick="locationreload();" />
+    <h2>* BOM-window.open</h2>
+    <input type="button" value="self" onclick="open1();" />
+    <input type="button" value="blank" onclick="open2();" />
+    <h2>* BOM-interaction</h2>
+    <input type="button" value="open" onclick="openwin();" />
+    <input type="text" value="" onkeypress="winmessage(this.value);" />
+    <input type="button" value="close" onclick="closewin();" />
+    <script>
+        function alertfnc() {
+            alert(1);
+            alert(2);
+            alert(3);
+        }
+        function confirmfnc() {
+            if(confirm('ok?')){
+                alert('OK');
+            }
+            else {
+                alert('close');
+                }
+        }
+        function promptfnc() {
+            if(prompt('ID?')==='powerlsh0103'){
+                alert('welcome');
+            }
+            else {
+                alert('try again');
+                }
+        }
+        function locationfnc() {
+            alert(location.href);
+        }
+        function locationreload() {
+            location.reload();
+        }
+        function open1() {
+            window.open('holygraillayout.html', '_self');
+        }
+        function open2() {
+            window.open('holygraillayout.html', '_blank', 'width=200, height=200');
+        }
+        function openwin() {
+            win = window.open('1.html');
+        }
+        function winmessage(msg) {
+            win.document.getElementById('message').innerText=msg;
+        }
+        function closewin() {
+            win.close();
+        }
+
+    </script>
 
 </body>
 
